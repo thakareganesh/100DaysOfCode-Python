@@ -11,7 +11,7 @@ def total_expenses(expenses):
 def filter_expenses_by_category(expenses, category):
     return filter(lambda expense: expense['category'] == category, expenses)
     
-
+# main function
 def main():
     expenses = []
     while True:
