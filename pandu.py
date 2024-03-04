@@ -1,9 +1,7 @@
-# Open a file in write mode ('w')
-with open('passage.txt', 'w') as file:
-    # Prompt the user to input a passage of text
-    passage = input("Enter your passage: ")
-    
-    # Write the passage to the file
-    file.write(passage)
+# Open the file in read mode
+with open('filename.txt', 'r') as file:
+    # Read the contents of the file
+    file_contents = file.read()
 
-print("Passage has been written to passage.txt")
+# Print the contents of the file
+print(file_contents)
