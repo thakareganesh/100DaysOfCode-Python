@@ -20,7 +20,7 @@ def convert_to_snake_case(pascal_or_camel_cased_string):
     return ''.join(snake_cased_char_list).strip('_')
 '''
 def main():
-    print(convert_to_snake_case("IAmPascalCasedString"))
+    print(convert_to_snake_case(input("Enter your string: ")))
 
 if __name__ == '__main__':
     main()
