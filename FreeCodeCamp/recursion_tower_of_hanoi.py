@@ -27,8 +27,13 @@ def make_allowed_move(rod1, rod2):
 #print(type(rods["A"]))
 """
 def move(n, source, auxiliary, target):
-    # display starting configuration
-    print(rods, '\n')
+    if n > 0:
+        # move n - 1 disks from source to auxiliary, so they are out of the way
+        move( n-1, source, target, auxiliary)
+        # move the nth disk from source to target
+        rods[target].append(rods[source].pop())
+        # display our progress
+        print(rods, '\n')
     
     # commenting down because we are going to use recursion to calculate smaller version of the same problem
     """
