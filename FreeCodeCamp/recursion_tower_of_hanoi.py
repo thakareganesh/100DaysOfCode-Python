@@ -1,12 +1,12 @@
-NUMBER_OF_DISKS = 4
+NUMBER_OF_DISKS = 5
 # we won't need number_of_moves because recursion 
 #number_of_moves = 2 ** NUMBER_OF_DISKS - 1
 #print(number_of_moves)
-rods = {
-    'A': list(range(NUMBER_OF_DISKS, 0, -1)),
-    'B': [],
-    'C': []
-}
+
+A = list(range(NUMBER_OF_DISKS, 0, -1))
+B = []
+C = []
+
 # we won't need make_allowed_move() because recursion 
 """
 def make_allowed_move(rod1, rod2):
@@ -31,9 +31,11 @@ def move(n, source, auxiliary, target):
         # move n - 1 disks from source to auxiliary, so they are out of the way
         move( n-1, source, target, auxiliary)
         # move the nth disk from source to target
-        rods[target].append(rods[source].pop())
+        target.append(source.pop())
         # display our progress
-        print(rods, '\n')
+        print(A,B,C, '\n')
+        # move the n - 1 disks that we left on auxiliary onto target
+        move(n -1, auxiliary, source, target)
     
     # commenting down because we are going to use recursion to calculate smaller version of the same problem
     """
@@ -58,4 +60,4 @@ def move(n, source, auxiliary, target):
             make_allowed_move(auxiliary, target)
     """
 # initiate call from source A to target C with auxiliary B
-move(NUMBER_OF_DISKS, 'A', 'B', 'C')
+move(NUMBER_OF_DISKS, A, B, C)
