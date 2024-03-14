@@ -1,4 +1,4 @@
-NUMBER_OF_DISKS = 5
+NUMBER_OF_DISKS = int(input("Enter your choice to take number of disks: "))
 # we won't need number_of_moves because recursion 
 #number_of_moves = 2 ** NUMBER_OF_DISKS - 1
 #print(number_of_moves)
