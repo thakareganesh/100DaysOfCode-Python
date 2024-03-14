@@ -9,4 +9,10 @@ class Board:
         for index, line in enumerate(self.board):
             row_list = []
             for square_no, part in enumerate([line[:3], line[3:6], line[6:]], start = 1):
-                pass
+                row_square = '|'.join(str(item) for item in part)
+                row_list.extend(row_square)
+                if square_no != 3:
+                    row_list.append("║")
+            row = f'║ {" ".join(row_list)} ║\n'
+            row_empty = row.replace('0', ' ')
+
