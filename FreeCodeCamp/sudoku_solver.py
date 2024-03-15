@@ -18,4 +18,11 @@ class Board:
             board_string += row_empty
             if index < 8:
                 if index % 3 == 2:
+                    board_string += f'╠═══{"╪═══"*2}{"╬═══"}{"╪═══"*2}{"╬═══"}{"╪═══"*2}╣\n'
+                else:
+                    board_string += middle_lines
+            else:
+                board_string += lower_lines
+        return board_string
+
 
