@@ -45,7 +45,7 @@ class Board:
         col_start = (col // 3) * 3
         for row_no in range(row_start, row_start + 3):
             for col_no in range(col_start, col_start + 3):
-                if self.board[row_no][col_no]:
+                if self.board[row_no][col_no] == num:
                     return False
         return True
     
@@ -58,6 +58,38 @@ class Board:
     
     def solver(self):
         if (next_empty := self.find_empty_cell()) is None:
-            pass
+            return True
+        else:
+            for guess in range(1,10):
+                if self.is_valid(next_empty, guess):
+                    row, col = next_empty
+                    self.board[row][col] = guess
+                    if self.solver():
+                        return True
+                    self.board[row][col] = 0
+        return False
     
+def solve_sudoku(board):
+    gameboard = Board(board)
+    print(f'\nPuzzle to solve:\n{gameboard}')
+    if gameboard.solver():
+        print("\nSolved puzzle:")
+        print(gameboard)
+    else:
+        print("\nThe provided puzzle is unsolvable.")
+    return gameboard
 
+    
+puzzle = [
+  [0, 0, 2, 0, 0, 8, 0, 0, 0],
+  [0, 0, 0, 0, 0, 3, 7, 6, 2],
+  [4, 3, 0, 0, 0, 0, 8, 0, 0],
+  [0, 5, 0, 0, 3, 0, 0, 9, 0],
+  [0, 4, 0, 0, 0, 0, 0, 2, 6],
+  [0, 0, 0, 4, 6, 7, 0, 0, 0],
+  [0, 8, 6, 7, 0, 4, 0, 0, 0],
+  [0, 0, 0, 5, 1, 9, 0, 0, 8],
+  [1, 7, 0, 0, 0, 6, 0, 0, 5]
+]
+
+solve_sudoku(puzzle)
