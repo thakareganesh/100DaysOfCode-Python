@@ -31,3 +31,11 @@ class Board:
                 return row, col
             except ValueError:
                 pass
+        return None
+    def valid_in_row(self, row, num):
+        num not in self.board[row]
+        return num not in self.board[row]
+    def valid_in_col(self, col, num):
+        for row in range(9):
+            self.board[row][col] != num
+
