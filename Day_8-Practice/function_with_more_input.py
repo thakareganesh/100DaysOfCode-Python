@@ -1,0 +1,1 @@
+ # fucntions with more than one inputs
