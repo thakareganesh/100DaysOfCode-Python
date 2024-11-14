@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Registration Page</title>
+  <style>
+    *{
+        color:blue;
+    }
+    body{
+        color: blue;
+    }
+    label{
+        color: red;
+    }
+    #buttons{
+        background-color: white;
+        color: blue;
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <form action="#" method="#">
+    <center>
+        <fieldset>
+            <legend>User Registration Form:</legend>
+    <table>
+        
+        <tr>
+            <td>
+                <label>Name: </label>
+            </td>
+            <td>
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password:</label>
+            </td>
+            <td>
+                <input type="password" name="psw">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Gender:</label>
+            </td>
+            <td>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Hobiies:</label>
+            </td>
+            <td>
+                <input type="checkbox" name="hobbies" value="programming">Programming
+                <input type="checkbox" name="hobbies" value="gaming">Gaming
+                <input type="checkbox" name="hobbies" value="chatting">Chatting
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>State:</label>
+            </td>
+            <td>
+                <select name="states">
+                    <option>--Select --</option>
+                    <option value="ap">Andrapradesh</option>
+                    <option value="mh">Maharashtra</option>
+                    <option value="tl">Telangana</option>
+                    <option value="tam">Tamilnadu</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Qualification:</label>
+            </td>
+            <td>
+                <select name="qualification" multiple="multiple" >
+                    <option value="ssc">SSC</option>
+                    <option value="hsc">HSC</option>
+                    <option value="ug">Under Graduation</option>
+                    <option value="pg">Post Graduation</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Addresss:</label>
+            </td>
+            <td>
+                <textarea rows="4" cols="" placeholder="eg.: H.No.1234, Vidhyanagar, Ameerpeth, Hyderbad"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Submit" id="buttons">
+                <input type="reset" value="reset" id="buttons">
+            </td>
+        </tr>
+        
+    </table>
+    </fieldset>
+    </center> 
+    </form>  
+  </main>
+  <footer>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
